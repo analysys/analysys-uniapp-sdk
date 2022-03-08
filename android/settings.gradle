@@ -1,0 +1,3 @@
+include ':AnalysysPlugin'
+include ':app'
+rootProject.name = "analysys-uniapp-sdk"

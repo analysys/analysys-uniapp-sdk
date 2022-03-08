@@ -1,0 +1,166 @@
+{
+    "name" : "DCTestUniPlugin",
+    "appid" : "__UNI__52C7573",
+    "description" : "测试uni原生插件",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "compatible" : {
+            "ignoreVersion" : true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持  
+        },
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {},
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a" ]
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "idfa" : false
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {}
+            }
+        },
+        "compilerVersion" : 3,
+        "nvueLaunchMode" : "fast",
+        "nativePlugins" : {
+            "AnalysysPlugin" : {
+                "debugMode" : "",
+                "appKey" : "",
+                "channel" : "",
+                "encryptType" : "",
+                "autoPageViewDuration" : "",
+                "automaticCollection" : "",
+                "automaticHeatmap" : "",
+                "autoCollectDeviceId" : "",
+                "uploadUrl" : "",
+                "debugUrl" : "",
+                "configUrl" : "",
+                "__plugin_info__" : {
+                    "name" : "AnalysysPlugin",
+                    "description" : "易观方舟SDK插件",
+                    "platforms" : "Android,iOS",
+                    "url" : "",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : false,
+                    "bought" : -1,
+                    "pid" : "",
+                    "parameters" : {
+                        "debugMode" : {
+                            "des" : "debug类型，0：关闭Debug模式，1：打开Debug模式，但该模式下发送的数据仅用于调试，不进行数据导入，2：打开Debug模式，并入库计算，默认 0",
+                            "key" : "AnalysysPlugin:debugMode",
+                            "value" : ""
+                        },
+                        "appKey" : {
+                            "des" : "易观分配唯一标识",
+                            "key" : "AnalysysPlugin:appKey",
+                            "value" : ""
+                        },
+                        "channel" : {
+                            "des" : "App发布的渠道标识",
+                            "key" : "AnalysysPlugin:channel",
+                            "value" : ""
+                        },
+                        "encryptType" : {
+                            "des" : "数据上传加密类型：1：AES ECB加密，2：AES CBC加密",
+                            "key" : "AnalysysPlugin:encryptType",
+                            "value" : ""
+                        },
+                        "autoPageViewDuration" : {
+                            "des" : "开启页面时长采集开关。true：开启，false：不开启，默认 false",
+                            "key" : "AnalysysPlugin:autoPageViewDuration",
+                            "value" : ""
+                        },
+                        "automaticCollection" : {
+                            "des" : "设置是否允许页面自动采集。true：开启，false：不开启，默认 false",
+                            "key" : "AnalysysPlugin:automaticCollection",
+                            "value" : ""
+                        },
+                        "automaticHeatmap" : {
+                            "des" : "是否开启热图。true：开启，false：不开启，默认 false",
+                            "key" : "AnalysysPlugin:automaticHeatmap",
+                            "value" : ""
+                        },
+                        "autoCollectDeviceId" : {
+                            "des" : "是否允许采集设备id，默认值：false",
+                            "key" : "AnalysysPlugin:autoCollectDeviceId",
+                            "value" : ""
+                        },
+                        "uploadUrl" : {
+                            "des" : "设置上传数据地址，如：https://arkpaastest.analysys.cn:8089",
+                            "key" : "AnalysysPlugin:uploadUrl",
+                            "value" : ""
+                        },
+                        "debugUrl" : {
+                            "des" : "设置可视化websocket服务器地址，如：ws://arkpaastest.analysys.cn:9091",
+                            "key" : "AnalysysPlugin:debugUrl",
+                            "value" : ""
+                        },
+                        "configUrl" : {
+                            "des" : "设置可视化埋点配置的服务器地址，如：https://arkpaastest.analysys.cn:8089",
+                            "key" : "AnalysysPlugin:configUrl",
+                            "value" : ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    }
+}

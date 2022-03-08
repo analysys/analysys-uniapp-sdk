@@ -1,0 +1,127 @@
+{
+	"name": "AnalysysPlugin",
+	"id": "AnalysysPlugin",
+	"version": "1.0.0",
+	"description": "易观方舟SDK插件",
+	"_dp_type": "nativeplugin",
+	"_dp_nativeplugin": {
+		"android": {
+			"plugins": [{
+				"type": "module",
+				"name": "AnalysysPlugin-UniAnalysysAgentModule",
+				"class": "com.analysys.uniapp.UniAnalysysAgentModule"
+			}],
+			"hooksClass": "com.analysys.uniapp.UniAnalysysPluginProxy",
+			"integrateType": "aar",
+			"dependencies": ["cn.com.analysys:analysys-arkanalysys:4.5.9"],
+			"parameters": {
+				"debugMode": {
+					"des": "debug类型，0：关闭Debug模式，1：打开Debug模式，但该模式下发送的数据仅用于调试，不进行数据导入，2：打开Debug模式，并入库计算，默认 0",
+					"key": "AnalysysPlugin:debugMode"
+				},
+				"appKey": {
+					"des": "易观分配唯一标识",
+					"key": "AnalysysPlugin:appKey"
+				},
+				"channel": {
+					"des": "App发布的渠道标识",
+					"key": "AnalysysPlugin:channel"
+				},
+				"encryptType": {
+					"des": "数据上传加密类型：1：AES ECB加密，2：AES CBC加密",
+					"key": "AnalysysPlugin:encryptType"
+				},
+				"autoPageViewDuration": {
+					"des": "开启页面时长采集开关。true：开启，false：不开启，默认 false",
+					"key": "AnalysysPlugin:autoPageViewDuration"
+				},
+				"automaticCollection": {
+					"des": "设置是否允许页面自动采集。true：开启，false：不开启，默认 false",
+					"key": "AnalysysPlugin:automaticCollection"
+				},
+				"automaticHeatmap": {
+					"des": "是否开启热图。true：开启，false：不开启，默认 false",
+					"key": "AnalysysPlugin:automaticHeatmap"
+				},
+				"autoCollectDeviceId": {
+					"des": "是否允许采集设备id，默认值：false",
+					"key": "AnalysysPlugin:autoCollectDeviceId"
+				},
+				"uploadUrl": {
+					"des": "设置上传数据地址，如：https://arkpaastest.analysys.cn:8089",
+					"key": "AnalysysPlugin:uploadUrl"
+				},
+				"debugUrl": {
+					"des": "设置可视化websocket服务器地址，如：ws://arkpaastest.analysys.cn:9091",
+					"key": "AnalysysPlugin:debugUrl"
+				},
+				"configUrl": {
+					"des": "设置可视化埋点配置的服务器地址，如：https://arkpaastest.analysys.cn:8089",
+					"key": "AnalysysPlugin:configUrl"
+				}
+			}
+		},
+		"ios": {
+			"plugins": [{
+				"type": "module",
+				"name": "AnalysysPlugin-UniAnalysysAgentModule",
+				"class": "UniAnalysysAgentModule"
+			}],
+			"hooksClass": "UniAnalysysPluginProxy",
+			"resources": [
+				"AnalysysAgent.bundle"
+			],
+			"frameworks": ["AnalysysAgent.framework", "AnalysysEncrypt.framework", "AnalysysPush.framework",
+				"AnalysysVisual.framework"
+			],
+			"integrateType": "framework",
+			"deploymentTarget": "9.0",
+			"parameters": {
+				"debugMode": {
+					"des": "debug类型，0：关闭Debug模式，1：打开Debug模式，但该模式下发送的数据仅用于调试，不进行数据导入，2：打开Debug模式，并入库计算，默认 0",
+					"key": "AnalysysPlugin:debugMode"
+				},
+				"appKey": {
+					"des": "易观分配唯一标识",
+					"key": "AnalysysPlugin:appKey"
+				},
+				"channel": {
+					"des": "App发布的渠道标识",
+					"key": "AnalysysPlugin:channel"
+				},
+				"encryptType": {
+					"des": "数据上传加密类型：1：AES ECB加密，2：AES CBC加密",
+					"key": "AnalysysPlugin:encryptType"
+				},
+				"autoPageViewDuration": {
+					"des": "开启页面时长采集开关。true：开启，false：不开启，默认 false",
+					"key": "AnalysysPlugin:autoPageViewDuration"
+				},
+				"automaticCollection": {
+					"des": "设置是否允许页面自动采集。true：开启，false：不开启，默认 false",
+					"key": "AnalysysPlugin:automaticCollection"
+				},
+				"automaticHeatmap": {
+					"des": "是否开启热图。true：开启，false：不开启，默认 false",
+					"key": "AnalysysPlugin:automaticHeatmap"
+				},
+				"autoCollectDeviceId": {
+					"des": "是否允许采集设备id，默认值：false",
+					"key": "AnalysysPlugin:autoCollectDeviceId"
+				},
+				"uploadUrl": {
+					"des": "设置上传数据地址，如：https://arkpaastest.analysys.cn:8089",
+					"key": "AnalysysPlugin:uploadUrl"
+				},
+				"debugUrl": {
+					"des": "设置可视化websocket服务器地址，如：ws://arkpaastest.analysys.cn:9091",
+					"key": "AnalysysPlugin:debugUrl"
+				},
+				"configUrl": {
+					"des": "设置可视化埋点配置的服务器地址，如：https://arkpaastest.analysys.cn:8089",
+					"key": "AnalysysPlugin:configUrl"
+				}
+			}
+		}
+	}
+}
